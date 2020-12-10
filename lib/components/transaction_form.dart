@@ -28,36 +28,37 @@ class _TransactionFormState extends State<TransactionForm> {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-          elevation: 5,
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                TextField(
-                  controller: titleController,
-                  decoration: InputDecoration(labelText: 'Titulo'),
-                ),
-                TextField(
-                  keyboardType: TextInputType.numberWithOptions(decimal: true),
-                  onSubmitted: (value) => _submitForm(),
-                  controller: valueController,
-                  decoration: InputDecoration(labelText: 'Valor (R\$)'),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    FlatButton(
-                      onPressed: () {
-                        _submitForm();
-                      },
-                      child: Text("Nova Transação",
-                          style: TextStyle(color: Colors.purple)),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          )),
+        elevation: 5,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              TextField(
+                controller: titleController,
+                decoration: InputDecoration(labelText: 'Titulo'),
+              ),
+              TextField(
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
+                onSubmitted: (value) => _submitForm(),
+                controller: valueController,
+                decoration: InputDecoration(labelText: 'Valor (R\$)'),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FlatButton(
+                    onPressed: () {
+                      _submitForm();
+                    },
+                    child: Text("Nova Transação",
+                        style: TextStyle(color: Colors.purple)),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

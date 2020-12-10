@@ -46,6 +46,8 @@ class _ExpensesAppState extends State<ExpensesApp> {
     );
 
     setState(() => {_transactions.add(newTransaction)});
+
+    Navigator.of(context).pop();
   }
 
   @override
