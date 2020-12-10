@@ -21,16 +21,15 @@ class TransactionList extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                     decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 1,
-                      color: Colors.purple,
-                    )),
+                      border: Border.all(
+                          width: 1, color: Theme.of(context).primaryColor),
+                    ),
                     padding: EdgeInsets.all(10),
                     child: Text(
                       "R\$ ${tr.value.toStringAsFixed(2)}",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.purple,
+                          color: Theme.of(context).primaryColor,
                           fontSize: 20),
                     ),
                   ),

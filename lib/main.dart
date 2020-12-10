@@ -55,7 +55,10 @@ class _ExpensesAppState extends State<ExpensesApp> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Despesas Pessoais"),
+        title: Text(
+          "Despesas Pessoais",
+          style: TextStyle(fontFamily: 'QuickSand-Bold', fontSize: 16),
+        ),
         actions: [
           IconButton(
               icon: Icon(Icons.add),
@@ -96,6 +99,18 @@ class MyHomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: ExpensesApp(),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        fontFamily: 'QuickSand',
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                    fontFamily: 'OpensSans',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800),
+              ),
+        ),
+      ),
     );
   }
 }
