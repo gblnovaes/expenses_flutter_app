@@ -12,6 +12,7 @@ class ExpensesApp extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: Text("Despesas Pessoais"),
+          actions: [IconButton(icon: Icon(Icons.add), onPressed: () => {})],
         ),
         body: SingleChildScrollView(
           child: Column(
